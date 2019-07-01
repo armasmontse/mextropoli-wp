@@ -1,0 +1,65 @@
+$col-1: 100%/12;
+
+// --- F i l t r o s
+.filtros {
+    @include under(lg) {
+        padding: 0 20px;
+    }
+    &__contenedor {
+        width: 100%;
+    }
+
+    &__label {
+        @extend %filtros-mapa;
+        color: #8C8C8C;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        margin-bottom: 45px;
+    }
+
+    &__tipos {
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            @include under(md850) {
+                flex-direction: column;
+            }
+            li {
+                width: 15%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include under(md850) {
+                    width: 100%;
+                    max-width: 320px;
+                    margin: 0 auto;
+                }
+                @include under(xs600) {
+                    max-width: 280px;
+                }
+                a {
+                    display: flex;
+                    @extend %filtros-label-mapa;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        position: relative;
+                        top: -3px;
+                        left: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
